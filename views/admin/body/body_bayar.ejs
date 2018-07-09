@@ -1,0 +1,39 @@
+<div class="row centered-form">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Purchase Order
+                    <small> cek sebelum membeli</small>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <%= chart[0].nama %>
+                    <% chart.forEach((produk)=>{ %>
+                        <h3><%= produk.id %></h3>
+                        <p>Tempat wisata <%= produk.nama %> dengan harga <%= produk.harga %></p>
+                    <% }); %>
+                    <button type="submit" class="btn btn-primary pull-right" style="margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#photoProfile')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

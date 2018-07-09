@@ -1,0 +1,70 @@
+<div class="row centered-form">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Registrasi
+                    <small> Its free</small>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <form action="/admin/addProduct" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Wisata</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="nama_wisata">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Lokasi</label>
+                        <input type="text" class="form-control" name="lokasi">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Deskripsi</label>
+                        <input type="text" class="form-control" name="deskripsi""
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Kategori</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="kategori" value="1">Edukasi</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="kategori" value="2">Alam</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="kategori" value="3">Pleasure</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="kategori" value="4">Shahwat</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Harga</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="harga">
+                    </div>
+                    <div class="form-check" style="margin-top: 40px;margin-bottom: 20px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-check-label">Cover Image</label>
+                                <input type="file" class="form-check-input" name="cover_image">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-check-label">Image</label>
+                                <input type="file" class="form-check-input" name="image" multiple>
+                                <small id="emailHelp" class="form-text text-muted">u can add multiple image at once !!!.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right" style="margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#photoProfile')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

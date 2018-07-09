@@ -1,0 +1,25 @@
+{
+    "development":{
+        "username": "root",
+        "password": null,
+        "database": "belajar-sequelize",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+
+    "test": {
+        "username": "",
+        "password": null,
+        "database": "",
+        "host": "",
+        "dialect": "mysql"
+      },
+
+      "production": {
+        "username": "clientpc",
+        "password": null,
+        "database": "belajar-sequelize",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+      }
+}

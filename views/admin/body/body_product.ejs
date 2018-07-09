@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Product List</h4>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <a href="/admin/addProduct" style="margin-left: 15px;"><button class="btn btn-primary">Add Product</button></a>
+                        <table class="table table-condensed" style="margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Nama Wisata</th>
+                                    <th>Lokasi</th>
+                                    <th>Deskripsi</th>
+                                    <th>Cover Image</th>
+                                    <th>Image 1</th>
+                                    <th>Image 2</th>
+                                    <th>Image 3</th>
+                                    <th>Image 4</th>
+                                    <th>Harga</th>
+                                    <th colspan="2" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% table.forEach((product)=>{ %>
+                                <tr>
+                                    <td><%= product.nama_wisata %></td>
+                                    <td><%= product.lokasi %></td>
+                                    <td><%= product.deskripsi %></td>
+                                    <td><img class="img-thumbnail" src="../../images/product/<%= product.cover_images %>" alt="<%= product.cover_images %>" width="100"></td>
+                                    <td><img class="img-thumbnail" src="../../images/product/<%= product.url_images1 %>" alt="<%= product.cover_images %>" width="100"></td>
+                                    <td><img class="img-thumbnail" src="../../images/product/<%= product.url_images2 %>" alt="<%= product.cover_images %>" width="100"></td>
+                                    <td><img class="img-thumbnail" src="../../images/product/<%= product.url_images3 %>" alt="<%= product.cover_images %>" width="100"></td>
+                                    <td><img class="img-thumbnail" src="../../images/product/<%= product.url_images4 %>" alt="<%= product.cover_images %>" width="100"></td>
+                                    <td>Rp.<%= product.harga %>,00</td>
+                                    <td class="text-center"><button class="btn btn-success">View</button></td>
+                                    <td class="text-center"><button class="btn btn-danger">Delete</button></td>
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

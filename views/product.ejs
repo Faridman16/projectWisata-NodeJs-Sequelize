@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+        <% include ./partials/header-layout.ejs%>
+</head>
+<body>
+
+    <% include ./partials/header-product.ejs%>
+
+        <div class="container">
+                <div class="row">
+                        <% listProduct.forEach((products)=>{%>
+                        <div class="col-sm-4">
+                                <div class="panel panel-primary">
+                                        <div class="panel-heading"><%= products.nama_kategori%></div>
+                                        <div class="panel-body"><img src="/images/product/<%= products.cover_images%>" class="img-responsive" style="width: 100%" alt="Image"></div>
+                                        <div class="panel-footer"><a href="/product/detailproduct/<%= products.id%>"><%= products.nama_wisata%></a></div>
+                                </div>
+                        </div>
+                        <%})%>
+
+                </div>
+        </div>
+<footer class="footer-distributed">
+        <% include ./partials/footer.ejs%>
+</footer>
+</body>
+
+</html>

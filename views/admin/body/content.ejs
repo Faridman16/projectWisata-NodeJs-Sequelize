@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+          <a href="/tambahProduct"><h5>Add Product</h5></a>
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Menege Product</h4>
+                    <p class="category">Login As : <%= user.username %><%= menu %></p>
+                </div>
+                <div class="content">
+                    <div class="row">
+                            <strong>alert : <%= alert %></strong> message : <%= message %>
+                        <% kategori.forEach((kategoris)=>{ %>
+                            <div class="col-md-4">
+                              <%= kategoris.nama_wisata %>
+                            </div>
+                        <% }); %>
+                    </div>
+
+                    <div class="footer">
+                        <div class="legend">
+                            <i class="fa fa-circle text-info"></i> Open
+                            <i class="fa fa-circle text-danger"></i> Bounce
+                            <i class="fa fa-circle text-warning"></i> Unsubscribe
+                        </div>
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">User List</h4>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <a href="/admin/addUser" style="margin-left: 15px;"><button class="btn btn-primary">Add User</button></a>
+                        <table class="table table-condensed" style="margin-top: 30px;">
+                            <thead>
+                                <tr>
+                                    <th>Image</th><th>Name</th><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th colspan="3" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% table.forEach((user)=>{ %>
+                                <tr>
+                                    <td><img class="img-circle" src="../../images/profile/<%= user.image %>" alt="image profile" width="100"></td>
+                                    <td><%= user.firstname %> <%= user.lastname %></td>
+                                    <td><%= user.username %></td>
+                                    <td><%= user.email %></td>
+                                    <td><%= user.role %></td>
+                                    <td><%= user.status %></td>
+                                    <td class="text-center"><button class="btn btn-success">View</button></td>
+                                    <td class="text-center"><button class="btn btn-danger">Delete</button></td>
+                                    <td class="text-center"><button class="btn btn-info">Disable</button></td>
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

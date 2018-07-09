@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <% include ./partials/header-layout.ejs%>
+</head>
+<body>
+    <!-- Navigation -->
+    <% include ./partials/header-product.ejs%>
+    <div class="container">
+          <h1 class="my-4">List Kategori</h1>
+    <div class="row">
+        <% kategori.forEach((kategoris)=>{%>
+        <div class="col-lg-4 col-sm-6 portfolio-item" >
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/product/<%= kategoris.id%>"><%= kategoris.nama_kategori%></a>
+                    </h4>
+                    <p><%= kategoris.deskripsi%></p>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+
+<footer class="footer-distributed">
+    <% include ./partials/footer.ejs%>
+</footer>
+</body>
+</html>

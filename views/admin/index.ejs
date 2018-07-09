@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<% include layout/header %>
+
+</head>
+<body>
+ 
+<div class="wrapper">
+	<% include layout/side %>
+
+        <div class="content">
+            <% if(menu=='user'){ %>
+                <% include body/body_user %>
+            <% }else if(menu=='addUser'){ %>
+                <% include body/body_addUser %>
+            <% }else if(menu=='product'){ %>
+                <% include body/body_product %>
+            <% }else if(menu=='addProduct'){ %>
+                <% include body/body_addProduct %>
+            <% }else if(menu=='purchase'){ %>
+                <% include body/body_purchase %>
+            <% }else if(menu=='bayar'){ %>
+                <% include body/body_bayar %>
+            <% }else{ %>
+                <% include body/content %>
+            <% } %>
+        </div>
+
+
+        <footer class="footer">
+					<% include layout/footer %>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+	<% include layout/js %>
+
+</html>

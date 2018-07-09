@@ -1,0 +1,18 @@
+{
+  "name": "expresscrudjade",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dian Setiyadi <diyansetiyadi@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/diyset/JadeNodeJS-MYSQL-CRUD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
